@@ -9,7 +9,7 @@
 Author       : Revolve
 Template Name: Minimal Blog Template
 Author URI : https://themefisher.com/
-Description: Revolve,blog,minimal,multipage,contact 
+Description: Revolve,blog,minimal,multipage,contact
 Version      : 1.0
 */
 /*------------------------------------------------------------------
@@ -61,7 +61,7 @@ Version      : 1.0
   8.3. Sidebar Nav
   8.4. Newsletter
   8.5. Tags
-  8.6. Review Post 
+  8.6. Review Post
   8.7. Top Authors
 
 9. VIDEO GALLERY
@@ -516,8 +516,8 @@ overlay search
 }
 
 .custom-image {
-    width: 325px; 
-    height: 175px; 
+    width: 325px;
+    height: 175px;
 }
 
 .toggle-wrap img.search-close {
@@ -622,6 +622,10 @@ overlay search
 .search-blog-title {
     position: relative;
     top: 3.5rem;
+}
+
+.media:hover h4 {
+    color: #CE8460;
 }
 
 @media (max-width: 1366px) {
@@ -946,6 +950,10 @@ overlay search
     position: relative;
 }
 
+.slider-item:hover .post-title a {
+    color: #CE8460;
+}
+
 .slider-post-content {
     position: absolute;
     bottom: 38px;
@@ -1026,6 +1034,10 @@ overlay search
     width: 10px;
     height: 1px;
     background: #000;
+}
+
+.post-list:hover .post-title  {
+    color: #CE8460;
 }
 
 .post-article {
@@ -1222,6 +1234,11 @@ overlay search
     border-radius: 2px;
     line-height: 30px;
 }
+
+.sidebar-post-item-big:hover h4 {
+ color: #CE8460;
+}
+
 .sidebar-widget.tags a {
     border: 1px solid rgba(0, 0, 0, 0.06);
     padding: 5px 12px;
@@ -1297,6 +1314,10 @@ overlay search
 
 .post-grid span {
     font-size: 15px;
+}
+
+.post-grid:hover .post-title {
+    color:  #CE8460;
 }
 
 .socials a {

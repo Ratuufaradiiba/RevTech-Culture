@@ -98,7 +98,7 @@
                         <h3 class="mb-4 text-center">{{ $row->totalCommentAndReply }} Komentar</h3>
                         @foreach ($culture->comment as $row )
 
-                        <div class="comment-area-box media">
+                        <div class="comment-area-box mediaa">
                             <div class="media-body ml-4 mb-3">
                                 <h4 class="mb-0">{{ $row->nama_commenter }}</h4>
                                 <span class="date-comm font-sm text-capitalize text-color"><i class="ti-time mr-2"></i>{{ $row->created_at->format('F d, Y') }}
@@ -123,7 +123,6 @@
                                     </div>
                                 </div>
                                 @endforeach
-
                             </div>
                         </div>
                         @endforeach

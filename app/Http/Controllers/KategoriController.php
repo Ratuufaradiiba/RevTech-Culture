@@ -16,7 +16,7 @@ class KategoriController extends Controller
         $kategori = Kategori::withCount('culture')->get();
         return view('landingpage.kategori', compact('culture','culturekanan','kategori'), [
             "title" => "Kategori Culture",
-            "active" => "Culture"
+            "active" => "Kategori"
         ]);
     }
 }
