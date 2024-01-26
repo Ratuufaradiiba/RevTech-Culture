@@ -37,7 +37,7 @@
                         <span class="font-sm letter-spacing-1 text-uppercase"><i
                                 class="ti-time mr-2"></i>{{ $culture1->created_at->diffForHumans() }}</span>
                     </li>
-                    <li class="post-view list-inline-item letter-spacing-1">189 Views</li>
+                    <li class="post-view list-inline-item letter-spacing-1">{{ $culture1->views->count() }} Views</li>
                 </ul>
             </div>
             <div class="post-content">
@@ -77,7 +77,7 @@
                                         <span class="font-sm letter-spacing-1 text-uppercase"><i
                                                 class="ti-time mr-2"></i>{{ $row->created_at->diffForHumans() }}</span>
                                     </li>
-                                    <li class="post-view list-inline-item letter-spacing-1">259 Views</li>
+                                    <li class="post-view list-inline-item letter-spacing-1">{{ $row->views->count() }} Views</li>
                                 </ul>
                             </div>
                             <div class="post-content">

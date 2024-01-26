@@ -42,13 +42,13 @@
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul id="menu" class="menu navbar-nav mx-auto">
                             <li class="nav-item ">
-                                <a href="/" class="nav-link {{ $active === 'Home' ? 'active' : '' }} ">Home</a>
+                                <a href="/" class="nav-link">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="{{ url('culturepage')}}" class="nav-link  {{ $active === 'Culture' ? 'active' : '' }} ">Culture</a>
+                            <li class="nav-item {{ request()->is('/culturepage*') ? 'active' : '' }}">
+                                <a href="{{ url('culturepage')}}" class="nav-link">Culture</a>
                             </li>
-                            <li class="nav-item ">
-                                <a href="{{ url('kategori') }}" class="nav-link {{ $active === 'Kategori' ? 'active' : '' }}">Kategori</a>
+                            <li class="nav-item {{ request()->is('/kategori*') ? 'active' : '' }}">
+                                <a href="{{ url('kategori') }}" class="nav-link">Kategori</a>
                             </li>
                             <li class="list-inline-item separator"></li>
                             @if (Route::has('login'))

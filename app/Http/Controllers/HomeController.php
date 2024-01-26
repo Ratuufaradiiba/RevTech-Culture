@@ -21,6 +21,7 @@ class HomeController extends Controller
     {
 
         $culture1 = Culture::with(['kategori'])->latest()->first();
+        $culture1ViewsCount = $culture1 ? $culture1->views()->count() : 0;
         $culture1_id = $culture1->id;
         $culture = Culture::with(['kategori'])->whereNotIn('id', [$culture1_id])->latest()->paginate(3);
         $cultureslider = Culture::with(['kategori'])->latest()->take(5)->get();
