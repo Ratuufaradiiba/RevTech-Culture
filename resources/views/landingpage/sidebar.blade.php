@@ -47,7 +47,7 @@
                 <ul class="list-unstyled">
                     @foreach ($kategori as $row)
                         <li class="align-items-center d-flex justify-content-between">
-                            <a>{{ $row->nama_kategori }}</a>
+                            <a href="{{ url('/kategori/#' . $row->nama_kategori) }}">{{ $row->nama_kategori }}</a>
                             <span>{{ $row->culture_count }}</span>
                         </li>
                     @endforeach

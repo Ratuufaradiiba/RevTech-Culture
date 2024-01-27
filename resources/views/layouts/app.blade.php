@@ -20,9 +20,9 @@
 
 <body class="font-sans antialiased">
     <x-banner />
+    <div>
+            @livewire('navigation-menu')
 
-    <div class="">
-        @livewire('navigation-menu')
 
         <!-- Page Heading -->
         @if (isset($header))

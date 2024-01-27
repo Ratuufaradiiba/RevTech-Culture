@@ -42,7 +42,9 @@ Route::post('/add_reply', [HomeController::class, 'add_reply']);
 Route::resource('culturepage', CulturepageController::class);
 Route::resource('kategori', KategoriController::class);
 
-
+Route::get('about-me', function (){
+ return view('landingpage.about-me');
+});
 
 
 //Admin page

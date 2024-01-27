@@ -4,10 +4,10 @@
         <div class="">
             <div class="">
                 <!-- Logo -->
-                
+
 
                 <!-- Navigation Links -->
-                
+
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -64,7 +64,7 @@
                 @endif
 
                 <!-- Settings Dropdown -->
-                <div class="ml-3 relative">
+                <div class="mx-auto ml-96 relative">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())

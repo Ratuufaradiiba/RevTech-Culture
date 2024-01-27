@@ -41,7 +41,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul id="menu" class="menu navbar-nav mx-auto">
-                            <li class="nav-item ">
+                            <li class="nav-item">
                                 <a href="/" class="nav-link">Home</a>
                             </li>
                             <li class="nav-item {{ request()->is('/culturepage*') ? 'active' : '' }}">
@@ -50,6 +50,11 @@
                             <li class="nav-item {{ request()->is('/kategori*') ? 'active' : '' }}">
                                 <a href="{{ url('kategori') }}" class="nav-link">Kategori</a>
                             </li>
+                            <li class="nav-item {{ request()->is('/kategori*') ? 'active' : '' }}">
+                                <a href="{{ url('about-me') }}" class="nav-link">About</a>
+                            </li>
+                            <li class="list-inline-item separator"></li>
+                            <li class="list-inline-item separator"></li>
                             <li class="list-inline-item separator"></li>
                             @if (Route::has('login'))
 
@@ -57,7 +62,7 @@
 
                             <li class="nav-item dropdown">
                                 <nav x-data="{ open: false }" class="">
-                                    <a href="" class="nav-link">{{ Auth::user()->name }}</a>
+                                    <a href="" class="nav-link-button">{{ Auth::user()->name }}</a>
 
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="nav-link" href="{{ route('profile.show') }}">
@@ -93,11 +98,11 @@
                             </li>
 
                             @else
-                            <li class="nav-item ">
-                                <a href="{{ route('login') }}" class="nav-link">Login</a>
+                            <li class="nav-item">
+                                <a href="{{ route('login') }}" class="nav-link-button">  Login</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('register') }}" class="nav-link">Register</a>
+                                <a href="{{ route('register') }}" class="nav-link-button">Register</a>
                             </li>
                             @endauth
                             @endif
