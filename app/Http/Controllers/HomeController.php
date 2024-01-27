@@ -30,11 +30,11 @@ class HomeController extends Controller
         $kategori = Kategori::withCount('culture')->get();
         $popularCulture = Culture::withCount('views')->orderBy('views_count', 'desc')->first();
         $trendingCultures = Culture::withCount('views')
-        ->orderBy('views_count', 'desc')
-        ->limit(2)
-        ->get();
+            ->orderBy('views_count', 'desc')
+            ->limit(2)
+            ->get();
 
-        return view('landingpage.userpage', compact('footerculture','culture', 'culture1', 'cultureslider', 'culturekanan', 'kategori', 'popularCulture','trendingCultures'), [
+        return view('landingpage.userpage', compact('footerculture', 'culture', 'culture1', 'cultureslider', 'culturekanan', 'kategori', 'popularCulture', 'trendingCultures'), [
             "title" => "RevTech Culture | Home",
             "active" => "Home"
         ]);
@@ -56,6 +56,7 @@ class HomeController extends Controller
                 "active" => "Dashboard"
             ]);
         } else {
+            $footerculture = Culture::all()->take(6);
             $culture1 = Culture::with(['kategori'])->latest()->first();
             $culture1_id = $culture1->id;
             $culture = Culture::with(['kategori'])->whereNotIn('id', [$culture1_id])->latest()->paginate(3);
@@ -63,8 +64,12 @@ class HomeController extends Controller
             $culturekanan = Culture::with(['kategori'])->oldest()->limit(2)->get();
             $kategori = Kategori::withCount('culture')->get();
             $popularCulture = Culture::withCount('views')->orderBy('views_count', 'desc')->first();
+            $trendingCultures = Culture::withCount('views')
+                ->orderBy('views_count', 'desc')
+                ->limit(2)
+                ->get();
 
-            return view('landingpage.userpage', compact('culture', 'culture1', 'cultureslider', 'culturekanan', 'kategori', 'popularCulture'), [
+            return view('landingpage.userpage', compact('trendingCultures', 'footerculture', 'culture', 'culture1', 'cultureslider', 'culturekanan', 'kategori', 'popularCulture'), [
                 "title" => "RevTech Culture | Home",
                 "active" => "Home"
             ]);
@@ -83,11 +88,11 @@ class HomeController extends Controller
         $prev = Culture::where('id', '<', $id)->orderBy('id', 'desc')->first();
         $culturesuka = Culture::with(['kategori'])->latest()->limit(3)->get();
         $trendingCultures = Culture::withCount('views')
-        ->orderBy('views_count', 'desc')
-        ->limit(2)
-        ->get();
+            ->orderBy('views_count', 'desc')
+            ->limit(2)
+            ->get();
 
-        return view('landingpage.culturedetail', compact('footerculture','row', 'culturekanan', 'kategori', 'next', 'prev', 'culturesuka', 'culture','trendingCultures'), ["title" => "RevTech Culture | Culture Detail", "active" => "Culture"])->with('row', $row);
+        return view('landingpage.culturedetail', compact('footerculture', 'row', 'culturekanan', 'kategori', 'next', 'prev', 'culturesuka', 'culture', 'trendingCultures'), ["title" => "RevTech Culture | Culture Detail", "active" => "Culture"])->with('row', $row);
     }
 
     public function search(Request $request)
