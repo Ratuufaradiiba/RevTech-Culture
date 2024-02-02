@@ -50,8 +50,7 @@
                             </div>
                         </div>
                         <div class="card-body p-3">
-                            <p class="text-sm">{{ $row->detailculture->sejarah_culture }}.
-                            </p>
+                            <div class="text-sm">{!! $row->detailculture->sejarah_culture !!}</div>
                             <hr class="horizontal gray-light my-4">
                             <ul class="list-group">
                                 <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Nama

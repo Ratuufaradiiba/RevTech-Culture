@@ -25,6 +25,7 @@
 	<link rel="stylesheet" href="{{asset('landingpage/theme/plugins/magnific-popup/magnific-popup.css')}}">
 	<!-- manin stylesheet -->
 	<link rel="stylesheet" href="{{asset('landingpage/theme/css/style.css')}}">
+    
 </head>
 
 <body>

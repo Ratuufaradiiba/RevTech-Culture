@@ -46,6 +46,9 @@ Route::get('about-me', function (){
  return view('landingpage.about-me');
 });
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 
 //Admin page
 Route::resource('culture', CultureController::class);

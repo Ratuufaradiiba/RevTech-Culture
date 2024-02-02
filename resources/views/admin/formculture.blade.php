@@ -50,30 +50,30 @@
                                             <p class="text text-danger mb-0">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <label for="inputNanme4" class="form-label">Masukan Deksripsi Culture</label>
                                             <input type="text" class="form-control" name="desc_culture" value="{{ old('desc_culture') }}">
                                             @error('desc_culture')
                                             <p class="text text-danger mb-0">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <label for="inputNanme4" class="form-label">Masukan Sejarah Culture</label>
-                                            <input type="text" class="form-control" name="sejarah_culture" value="{{ old('sejarah_culture') }}">
+                                            <textarea type="text" class="form-control" name="sejarah_culture">{!! old('sejarah_culture') !!}</textarea>
                                             @error('sejarah_culture')
                                             <p class="text text-danger mb-0">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <label for="inputNanme4" class="form-label">Masukan Makna Culture</label>
-                                            <input type="text" class="form-control" name="makna_culture" value="{{ old('makna_culture') }}">
+                                            <textarea type="text" class="form-control" name="makna_culture">{!! old('makna_culture') !!}</textarea>
                                             @error('makna_culture')
                                             <p class="text text-danger mb-0">{{ $message }}</p>
                                             @enderror
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <label for="inputNanme4" class="form-label">Masukan Ciri Culture</label>
-                                            <input type="text" class="form-control" name="ciri_culture" value="{{ old('ciri_culture') }}">
+                                            <textarea type="text" class="form-control" name="ciri_culture">{!! old('ciri_culture') !!}</textarea>
                                             @error('ciri_culture')
                                             <p class="text text-danger mb-0">{{ $message }}</p>
                                             @enderror
