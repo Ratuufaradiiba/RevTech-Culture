@@ -3,13 +3,14 @@
     tinymce.init({
         path_absolute: "/",
         selector: 'textarea', // Replace this CSS selector to match the placeholder element for TinyMCE
+        nonbreaking_force_tab: true,
         plugins: [
             'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'pagebreak',
             'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen',
-            'insertdatetime', 'table', 'emoticons'
+            'insertdatetime', 'table', 'emoticons', 'nonbreaking'
         ],
         toolbar: ' undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify lineheight | ' +
-            'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+            'bullist numlist outdent inden nonbreaking | link image | print preview media fullscreen | ' +
             'forecolor backcolor emoticons',
         promotion: false,
         relative_urls: false,
